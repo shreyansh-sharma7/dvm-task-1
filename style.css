@@ -1,6 +1,22 @@
+@font-face {
+  font-family: "Charlie Display";
+  src: url("/Charlie Display Font/charlie-display-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Charlie Display Bold";
+  src: url("/Charlie Display Font/charlie-display-3.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
 body {
   /* height: 100vh; */
   width: 99vw;
+}
+:root {
+  --trello-blue: #0065ff;
 }
 
 .navbar div {
@@ -27,7 +43,7 @@ body {
 .links div a {
   color: #091e42;
   text-decoration: none;
-  font-size: large;
+  font-size: medium;
 }
 
 .nav-right {
@@ -35,8 +51,8 @@ body {
 }
 
 .font-abel {
-  font-family: "Abel", sans-serif;
-  font-weight: 400;
+  font-family: "Charlie Display";
+  /* font-weight: 600; */
   font-style: normal;
 }
 
@@ -51,8 +67,8 @@ body {
 }
 
 .img-cont video {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   object-fit: cover;
   display: block;
 }
@@ -68,6 +84,7 @@ body {
 h1 {
   font-size: 3.5rem;
   margin: 0;
+  font-family: "Charlie Display Bold";
 }
 
 .text-cont {
@@ -79,8 +96,49 @@ h1 {
 }
 
 .section-1 .caption {
-  font-weight: 1000;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+.section-1 .form input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 66.66%;
+  margin: 0.2rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(223, 225, 230);
+  /* height: 2rem; */
+  font-family: "Charlie Display Bold";
+}
+
+.section-1 .form {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-family: "Charlie Display Bold";
+}
+
+.section-1 .form button {
+  background-color: var(--trello-blue);
+  color: white;
+  font-size: 1rem;
+  /* padding: 0.3rem; */
+  border-radius: 0.25rem;
+  width: 33.33%;
+  border: none;
+  font-family: "Charlie Display Bold";
+  margin-left: 1rem;
+  /* padding-top: 0.8rem; */
+  /* padding-bottom: 0.8rem; */
+  /* height: 3rem; */
+}
+
+.acknowledge a {
+  color: var(--trello-blue);
+}
+
+.acknowledge {
+  font-size: 1rem;
+  font-family: "Charlie Display Bold";
 }

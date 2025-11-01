@@ -38,8 +38,8 @@ nav {
 
 .navbar {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
   /* justify-content: center; */
   flex-direction: row;
   height: 60px;
@@ -48,15 +48,21 @@ nav {
 .nav-left {
   display: flex;
 }
-
-.nav-center .links {
+.nav-center .nav-center .links {
   display: flex;
   justify-content: space-between;
 }
+
+.navbar .links {
+  display: flex;
+}
+
 .links div a {
+  margin: 2rem;
   color: #091e42;
   text-decoration: none;
   font-size: medium;
+  font-family: "Charlie Display Bold";
 }
 
 .nav-right {
@@ -249,16 +255,20 @@ h1 {
 
 .section-3 h2 {
   font-family: "Charlie Display Bold";
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   margin: 0;
+  margin-top: 2rem;
+  font-weight: 100000 !important;
 }
 
 .section-3 .desc {
   font-family: "Charlie Display";
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   max-width: 650px;
   color: #deebff;
   line-height: 1.6;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
 }
 
 .section-3-blue {
@@ -319,9 +329,11 @@ h1 {
 .feature-block p {
   font-family: "Charlie Display";
   color: #253858;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   margin: 0;
+  text-align: left;
+  margin-top: 0.3rem;
 }
 
 .section-3 .feature-block:nth-child(2) {
@@ -350,13 +362,26 @@ h1 {
 }
 
 .section-4 .text-head {
-  max-width: 700px;
+  max-width: 500px;
+  /* width: 100%; */
+  text-align: left;
+}
+.section-4 .header-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.not-mini-title {
+  font-size: 1rem;
+  font-family: "Charlie Display Bold";
 }
 
 .section-4 .mini-title {
   color: #091e42;
   font-family: "Charlie Display Bold";
-  font-size: 0.5rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -364,14 +389,15 @@ h1 {
 
 .section-4 h2 {
   font-family: "Charlie Display Bold";
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   margin: 0.2rem 0;
   color: #091e42;
+  margin-bottom: 0.7rem;
 }
 
 .section-4 .desc {
   font-family: "Charlie Display";
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #42526e;
   line-height: 1.6;
 }
@@ -993,4 +1019,26 @@ nav {
 
 .footer-logo svg {
   height: 2.5rem;
+}
+
+.nav-right {
+  height: 100%;
+}
+
+.nav-right button {
+  /* color: white; */
+  border: 0;
+  height: 100%;
+  background-color: white;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  font-family: "Charlie Display";
+}
+
+.get-started {
+  font-family: "Charlie Display Bold" !important;
+
+  background-color: var(--trello-blue) !important;
+  color: white;
 }

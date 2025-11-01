@@ -11,14 +11,26 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   /* height: 100vh; */
-  width: 99vw;
+  width: 100%;
 }
 :root {
   --trello-blue: #0065ff;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
 .navbar div {
   align-items: center;
 }
@@ -141,4 +153,438 @@ h1 {
 .acknowledge {
   font-size: 1rem;
   font-family: "Charlie Display Bold";
+}
+
+.section-2 {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
+}
+
+.section-2-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+  align-items: center;
+  gap: 4rem;
+}
+
+.section-2 h2 {
+  font-family: "Charlie Display Bold";
+  color: #091e42;
+  font-size: 2.5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.section-2 .desc {
+  font-family: "Charlie Display";
+  color: #253858;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.feature-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* .feature-card img {
+  height: 200px;
+  width: 200px;
+} */
+
+.feature-card {
+  background-color: #f4f5f7;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0px 1px 2px rgba(9, 30, 66, 0.1);
+  font-family: "Charlie Display";
+}
+
+.feature-card h3 {
+  color: #091e42;
+  font-family: "Charlie Display Bold";
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #253858;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.img-col img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 12px rgba(9, 30, 66, 0.15);
+}
+
+.section-3 {
+  /* background-color: var(--trello-blue); */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
+  position: relative;
+  overflow: visible;
+}
+
+.section-3-cont {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  color: #ffffff;
+}
+
+.section-3 h2 {
+  font-family: "Charlie Display Bold";
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.section-3 .desc {
+  font-family: "Charlie Display";
+  font-size: 1.1rem;
+  max-width: 650px;
+  color: #deebff;
+  line-height: 1.6;
+}
+
+.section-3-blue {
+  background-color: var(--trello-blue);
+  height: 75%;
+  width: 100%;
+  color: var(--trello-blue);
+  position: absolute;
+  z-index: -100;
+}
+
+.feature-block {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  background: #ffffff;
+  color: #091e42;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(9, 30, 66, 0.15);
+  padding: 2rem 2.5rem;
+  gap: 2.5rem;
+  overflow: visible;
+  width: 90%;
+  max-width: 1000px;
+  margin-top: -2rem;
+}
+
+.feature-block.reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.feature-block img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.feature-block .mini-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-block .mini-title img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.feature-block .mini-title span {
+  font-family: "Charlie Display Bold";
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: var(--trello-blue);
+  text-transform: uppercase;
+}
+
+.feature-block p {
+  font-family: "Charlie Display";
+  color: #253858;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.section-3 .feature-block:nth-child(2) {
+  margin-top: 3rem;
+}
+
+.section-3 .feature-block.reverse {
+  margin-top: 3rem;
+}
+
+.section-4 {
+  background-color: #f4f5f7;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 6rem 0;
+}
+
+.section-4-cont {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.section-4 .text-head {
+  max-width: 700px;
+}
+
+.section-4 .mini-title {
+  color: #091e42;
+  font-family: "Charlie Display Bold";
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-4 h2 {
+  font-family: "Charlie Display Bold";
+  font-size: 2.3rem;
+  margin: 0.2rem 0;
+  color: #091e42;
+}
+
+.section-4 .desc {
+  font-family: "Charlie Display";
+  font-size: 1.1rem;
+  color: #42526e;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(9, 30, 66, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.feature-card h3 {
+  font-family: "Charlie Display Bold";
+  font-size: 1.3rem;
+  color: #091e42;
+  margin: 0;
+}
+
+.feature-card p {
+  font-family: "Charlie Display";
+  color: #42526e;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.feature-card button {
+  background: transparent;
+  color: var(--trello-blue);
+  border: 1.5px solid var(--trello-blue);
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-family: "Charlie Display Bold";
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.feature-card button:hover {
+  background-color: var(--trello-blue);
+  color: #ffffff;
+}
+
+.section-5 {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0 4rem;
+  gap: 3rem;
+}
+
+/* --- Testimonial card --- */
+.testimonial-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(9, 30, 66, 0.1);
+  overflow: hidden;
+  width: 85%;
+  max-width: 1100px;
+}
+
+.testimonial-left {
+  flex: 1.5;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-left .quote {
+  font-family: "Charlie Display Bold";
+  font-size: 1.25rem;
+  color: #091e42;
+  line-height: 1.7;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.author-info hr {
+  width: 40px;
+  border: 1px solid #091e42;
+  margin-bottom: 0.5rem;
+}
+
+.author-info .name {
+  font-family: "Charlie Display Bold";
+  color: #091e42;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.author-info .title {
+  font-family: "Charlie Display";
+  color: #42526e;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+.author img {
+  width: 90px;
+  object-fit: contain;
+}
+
+.read-link {
+  color: var(--trello-blue);
+  text-decoration: none;
+  font-family: "Charlie Display Bold";
+  margin-top: 1rem;
+}
+
+.read-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Right side stat block --- */
+.testimonial-right {
+  flex: 1;
+  background: var(--trello-blue);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.testimonial-right h3 {
+  font-family: "Charlie Display Bold";
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.survey-link {
+  color: #ffffff;
+  opacity: 0.9;
+  text-decoration: underline;
+  font-family: "Charlie Display";
+  font-size: 0.95rem;
+}
+
+/* --- Logos + community --- */
+.community {
+  text-align: center;
+  color: #091e42;
+  font-family: "Charlie Display";
+  font-size: 1.1rem;
+  line-height: 1.6;
+  width: 85%;
+}
+
+.logos {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.logos img:hover {
+  opacity: 1;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .testimonial-card {
+    flex-direction: column;
+  }
+
+  .testimonial-right {
+    padding: 2rem;
+  }
+
+  .logos {
+    gap: 2rem;
+  }
 }

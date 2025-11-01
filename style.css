@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Charlie Display";
-  src: url("/Charlie Display Font/charlie-display-light.ttf") format("truetype");
+  src: url("/assets/font/charlie-display-light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Charlie Display Bold";
-  src: url("/Charlie Display Font/charlie-display-3.ttf") format("truetype");
+  src: url("/assets/font/charlie-display-3.ttf") format("truetype");
   font-weight: lighter;
   font-style: normal;
 }
@@ -1006,6 +1006,7 @@ nav {
 
 .form-bottom .acknowledge {
   text-align: center;
+  width: 100%;
 }
 
 .footer-logo svg {

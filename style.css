@@ -1163,16 +1163,57 @@ nav {
 
 .black-index-cont {
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr;
-  max-width: 25px;
+  grid-template-columns: 8fr 1fr 1fr;
+  /* max-width: 25px; */
   justify-self: end;
-  display: none;
+  max-width: 115px;
+  /* display: none; */
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+/* .black-index {
+  width: 100%;
+  border-radius: 5px;
+  min-width: 10px;
+  height: 10px;
+  background-color: #091e42;
+  transition-duration: 150ms;
+}
+
+.black-index:hover {
+  background-color: #848ea0;
+}
+
+.black-index.selected {
+  border-radius: 5px;
+  width: 100%;
+  background-color: #848ea0;
+} */
+
+.black-index-cont {
+  display: flex;
+  justify-self: end;
+  max-width: 115px;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 .black-index {
-  background-color: black;
-  border-radius: 100%;
-  width: 100%;
-  /* min-width: 10px; */
-  height: 6.25px;
+  flex: 1;
+  border-radius: 5px;
+  height: 10px;
+  min-width: 10px;
+  background-color: #091e42;
+  transition: all 0.3s ease;
+}
+
+.black-index:hover {
+  background-color: #848ea0;
+}
+
+.black-index.selected {
+  flex: 5;
+  min-width: 50px;
+  background-color: #848ea0;
 }

@@ -1233,11 +1233,26 @@ nav {
   color: #0065ff;
 }
 
+.logo-2 {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .footer-col {
     border-bottom: 1px solid rgb(80, 95, 121);
     padding: 0px 0px 1rem;
     margin: 0px 0px 1rem;
+  }
+  .logo-1 {
+    display: none;
+  }
+  .logo-2 {
+    display: block;
+    justify-self: center;
+    margin: 1rem;
+  }
+  .section-5 {
+    padding-bottom: 0px;
   }
 
   .section-2 {
@@ -1317,6 +1332,17 @@ nav {
 
   .form-bottom .acknowledge {
     text-align: center;
+  }
+
+  .section-5 .top-cont {
+    justify-self: center !important;
+    margin: 1rem;
+  }
+  .testimonial-carousel {
+    flex-direction: column-reverse !important;
+  }
+  .carousel-controls {
+    display: none !important;
   }
 }
 
@@ -1464,10 +1490,27 @@ nav {
   align-items: center;
   color: rgb(122, 134, 154);
   margin: 0.3rem;
+  cursor: pointer;
 }
 
 .carousel-controls {
   display: flex;
   justify-self: flex-end;
   margin: 1rem;
+}
+
+.section-5 .top-cont {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+}
+
+.section-5 .black-index-cont {
+  align-self: normal;
+  margin: 0rem;
+  align-items: center;
+}
+
+.black-index {
+  cursor: pointer;
 }

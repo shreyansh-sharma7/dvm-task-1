@@ -61,11 +61,19 @@ nav {
 }
 
 .links div a {
-  margin: 2rem;
+  /* margin: 2rem; */
   color: #091e42;
   text-decoration: none;
   font-size: medium;
   font-family: "Charlie Display Bold";
+}
+
+.links div {
+  margin: 1.4rem;
+}
+
+.links div svg {
+  height: 6px;
 }
 
 .nav-right {
@@ -103,6 +111,11 @@ nav {
   justify-items: center;
 }
 
+.section-2 {
+  width: 90%;
+  justify-self: center;
+}
+
 .section-1 h1 {
   font-size: 3rem;
   margin: 0;
@@ -116,6 +129,10 @@ nav {
   flex-direction: column;
   margin: 2rem;
   /* align-items: center; */
+}
+
+.nav-max-length {
+  max-width: 1000px;
 }
 
 .section-1 .caption {
@@ -175,11 +192,12 @@ nav {
 
 .section-2 {
   background-color: #ffffff;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   /* padding: 6rem 0; */
   padding: 3rem;
+  /* margin: 3rem; */
 }
 
 .heading {
@@ -243,6 +261,14 @@ nav {
   color: #253858;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.img-col {
+  display: flex;
+  /* align-items: center; */
+  /* align-items: flex-end; */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .img-col img {
@@ -433,6 +459,11 @@ nav {
   transition: transform 0.2s ease;
 }
 
+.section-2 .feature-card {
+  max-width: 530px !important;
+  min-width: 330px;
+}
+
 .feature-card.selected {
   box-shadow: 0 4px 16px rgba(9, 30, 66, 0.1);
   border-left: 10px solid #03c7e4;
@@ -460,10 +491,11 @@ nav {
 
 .feature-card h3 {
   font-family: "Charlie Display Bold";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #091e42;
   margin: 0;
   font-weight: bolder;
+  margin-bottom: -1rem;
 }
 
 .feature-card p {
@@ -845,6 +877,7 @@ body {
   .section-4,
   .section-5 {
     padding: 3rem 1rem;
+    width: 100%;
   }
 
   .section-2-cont,
@@ -1162,6 +1195,13 @@ nav {
 }
 
 @media (max-width: 1000px) {
+  .section-2 {
+    width: 100%;
+  }
+  .video-link {
+    justify-content: center;
+  }
+
   .nav-center,
   .nav-right {
     display: none;
@@ -1265,10 +1305,12 @@ nav {
 
 .black-index-cont {
   display: flex;
-  justify-self: end;
+  /* justify-self: end; */
   max-width: 115px;
   gap: 0.2rem;
   margin-bottom: 1rem;
+  /* justify-self: flex-end; */
+  align-self: flex-end;
 }
 
 .black-index {
@@ -1276,8 +1318,11 @@ nav {
   border-radius: 5px;
   height: 10px;
   min-width: 10px;
+  width: 10px;
   background-color: #091e42;
   transition: all 0.3s ease;
+  color: transparent;
+  max-width: 10px;
 }
 
 .black-index:hover {
@@ -1289,3 +1334,22 @@ nav {
   min-width: 50px;
   background-color: #848ea0;
 }
+
+.video-link {
+  color: var(--trello-blue);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.video-link a {
+  color: inherit;
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-family: "Charlie Display Bold";
+}
+
+/* .video-link svg {
+  height: 16px;
+} */

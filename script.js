@@ -56,12 +56,14 @@ const nextBtn = document.querySelector(".next");
 const container = document.querySelector(".testimonial-cards");
 
 let index = 0;
+const black_indexes2 = document.querySelectorAll(".testimonial-carousel .black-index");
 
 function updateCarousel() {
   container.style.transform = `translateX(-${index * 100}%)`;
 
   cards.forEach((card, i) => {
     card.classList.toggle("selected", i === index);
+    black_indexes2[i].classList.toggle("selected", i==index)
   });
 }
 
@@ -78,7 +80,6 @@ prevBtn.addEventListener("click", () => {
 });
 
 
-const black_indexes2 = document.querySelectorAll(".testimonial-carousel .black-index");
 
 for (const black_index of black_indexes2) {
   black_index.addEventListener("click", function () {

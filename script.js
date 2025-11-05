@@ -9,7 +9,7 @@ mobileMenu.classList.toggle("active");
 
 const carousel = document.getElementById("carousel-1-image");
 const carousel_buttons = document.querySelectorAll(".section-2 .feature-card");
-const black_indexes = document.querySelectorAll(".carousel-1 .black-index");
+const black_indexes = document.querySelectorAll("#carousel-1 .black-index");
 
 function changeImage(newSrc) {
   carousel.classList.add("slide-out");

@@ -51,3 +51,36 @@ for (const black_index of black_indexes) {
     document.getElementById(this.id).classList.add("selected");
   });
 }
+
+
+const cards = document.querySelectorAll(".testimonial-card");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const container = document.querySelector(".testimonial-cards");
+
+let index = 0;
+
+function updateCarousel() {
+  // Slide effect
+  container.style.transform = `translateX(-${index * 100}%)`;
+
+  // Update .selected class
+  cards.forEach((card, i) => {
+    card.classList.toggle("selected", i === index);
+  });
+}
+
+// Initialize first card
+updateCarousel();
+
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % cards.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + cards.length) % cards.length;
+  updateCarousel();
+});
+
+

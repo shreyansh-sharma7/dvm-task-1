@@ -299,7 +299,7 @@ nav {
 
 .section-3 h2 {
   font-family: "Charlie Display Bold";
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   margin: 0;
   margin-top: 2rem;
   font-weight: 100000 !important;
@@ -307,7 +307,7 @@ nav {
 
 .section-3 .desc {
   font-family: "Charlie Display";
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   max-width: 650px;
   color: #deebff;
   line-height: 1.6;
@@ -896,7 +896,8 @@ body {
   }
 
   .feature-block .mini-title span {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-family: "Charlie Display Bold";
   }
 
   /* Community logos wrap */
@@ -1198,6 +1199,11 @@ nav {
   .section-2 {
     width: 100%;
   }
+
+  .section-3 .mini-title svg {
+    display: none;
+  }
+
   .video-link {
     justify-content: center;
   }
@@ -1271,6 +1277,10 @@ nav {
 
 .text-col {
   display: flex;
+}
+
+.section-3 .text-col {
+  flex-direction: column;
 }
 
 .black-index-cont {
@@ -1353,3 +1363,17 @@ nav {
 /* .video-link svg {
   height: 16px;
 } */
+
+#carousel-1-image {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#carousel-1-image.slide-out {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+#carousel-1-image.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}

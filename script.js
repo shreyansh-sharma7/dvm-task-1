@@ -9,7 +9,7 @@ mobileMenu.classList.toggle("active");
 
 const carousel = document.getElementById("carousel-1-image");
 const carousel_buttons = document.querySelectorAll(".section-2 .feature-card");
-const black_indexes = document.querySelectorAll(".black-index");
+const black_indexes = document.querySelectorAll(".carousel-1 .black-index");
 
 function changeImage(newSrc) {
   // Trigger slide-out animation
@@ -84,3 +84,27 @@ prevBtn.addEventListener("click", () => {
 });
 
 
+const black_indexes2 = document.querySelectorAll(".testimonial-carousel .black-index");
+
+for (const black_index of black_indexes2) {
+  black_index.addEventListener("click", function () {
+    // Extract index from ID (example: id="dot-2" -> "2")
+    const targetIndex = parseInt(this.id[4]) - 1;
+
+    // Update global index and move carousel
+    index = targetIndex;
+    updateCarousel();
+
+    // Reset all black-index buttons
+    for (const bi of black_indexes2) bi.className = "black-index";
+
+    // Highlight the clicked one
+    this.classList.add("selected");
+
+    // Update testimonial cards' selected class
+    document.querySelectorAll(".testimonial-card").forEach((card) => {
+      card.classList.remove("selected");
+    });
+    document.getElementById(`card-${targetIndex + 1}`).classList.add("selected");
+  });
+}

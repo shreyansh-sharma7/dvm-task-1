@@ -1019,7 +1019,7 @@ nav {
 
 .footer-logo p {
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   margin-top: 1.2rem;
 }
 
@@ -1103,10 +1103,21 @@ nav {
 @media (max-width: 980px) {
   .footer-top {
     grid-template-columns: 1fr;
+    border: none;
   }
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+
+  .footer .footer-logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-top {
+    /* width: 80%; */
   }
 }
 
@@ -1223,6 +1234,12 @@ nav {
 }
 
 @media (max-width: 1000px) {
+  .footer-col {
+    border-bottom: 1px solid rgb(80, 95, 121);
+    padding: 0px 0px 1rem;
+    margin: 0px 0px 1rem;
+  }
+
   .section-2 {
     width: 100%;
   }
@@ -1446,8 +1463,11 @@ nav {
   justify-content: center;
   align-items: center;
   color: rgb(122, 134, 154);
+  margin: 0.3rem;
 }
 
 .carousel-controls {
   display: flex;
+  justify-self: flex-end;
+  margin: 1rem;
 }
